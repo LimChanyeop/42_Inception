@@ -1,0 +1,62 @@
+version: '3'
+
+services:
+  mariadb:
+    container_name: srcs_mariadb
+    build : ./requirements/mariadb/
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+    expose:
+      - "3306"
+    networks:
+      - intra
+    env_file: .env
+    tty: true
+
+  wordpress:
+    container_name: srcs_wordpress
+    depends_on:
+      - mariadb
+    build: ./requirements/wordpress/
+    restart: always
+    volumes:
+      - wp_data:/var/www/html
+    expose:
+      - "9000"
+    networks:
+      - intra
+    env_file: .env
+    tty: true
+
+  nginx:
+    container_name: srcs_nginx
+    depends_on:
+      - wordpress
+    build: ./requirements/nginx/
+    restart: always
+    ports:
+      - "443:443"
+    volumes:
+      - wp_data:/var/www/html
+    networks:
+      - intra
+    tty: true
+networks:
+  intra:
+volumes:
+  wp_data: {}
+  db_data: {}
+# volumes:
+#   wp_data:
+#     driver: local
+#     driver_opts:
+#       type: none
+#       o: bind
+#       device: 'home/clim/data/wordpress'
+#   db_data:
+#     driver: local
+#     driver_opts:
+#       type: none
+#       o: bind
+#       device: 'home/clim/data/mariadb'
