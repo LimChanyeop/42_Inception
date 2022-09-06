@@ -107,10 +107,10 @@ CREATE TABLE `wp_options` (
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
 (1, 'siteurl', 'https://localhost', 'yes'),
 (2, 'home', 'https://localhost', 'yes'),
-(3, 'blogname', 'skim', 'yes'),
+(3, 'blogname', 'clim', 'yes'),
 (4, 'blogdescription', '다른 워드프레스 사이트', 'yes'),
 (5, 'users_can_register', '0', 'yes'),
-(6, 'admin_email', 'skim@student.42seoul.kr', 'yes'),
+(6, 'admin_email', 'clim@student.42seoul.kr', 'yes'),
 (7, 'start_of_week', '0', 'yes'),
 (8, 'use_balanceTags', '0', 'yes'),
 (9, 'use_smilies', '1', 'yes'),
@@ -406,7 +406,7 @@ CREATE TABLE `wp_usermeta` (
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
-(1, 1, 'nickname', 'skim'),
+(1, 1, 'nickname', 'clim'),
 (2, 1, 'first_name', ''),
 (3, 1, 'last_name', ''),
 (4, 1, 'description', ''),
@@ -426,7 +426,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (18, 1, 'wp_user-settings-time', '1632821711'),
 (19, 1, 'wp_dashboard_quick_press_last_post_id', '4'),
 (20, 1, 'community-events-location', 'a:1:{s:2:\"ip\";s:10:\"172.17.0.0\";}'),
-(21, 2, 'nickname', 'skim2'),
+(21, 2, 'nickname', 'clim2'),
 (22, 2, 'first_name', '수빈'),
 (23, 2, 'last_name', '김'),
 (24, 2, 'description', ''),
@@ -465,8 +465,8 @@ CREATE TABLE `wp_users` (
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
-(1, 'skim', '$P$BrZPBY1YMzdgZdTNVIhGfL0MOYJRuo/', 'skim', 'skim@student.42seoul.kr', 'https://localhost/wordpress', '2021-09-28 09:35:07', '', 0, 'skim'),
-(2, 'skim2', '$P$BltOA1vaPoEW7JWcaSGczUBglGwkMQ/', 'skim2', 'k_subin@naver.com', '', '2021-09-28 09:35:48', '1632821748:$P$BMYRsp5rfZExPZzdNJkqgMmjRPDtHv/', 0, '수빈 김');
+(1, 'clim', '$P$BrZPBY1YMzdgZdTNVIhGfL0MOYJRuo/', 'clim', 'clim@student.42seoul.kr', 'https://localhost/wordpress', '2021-09-28 09:35:07', '', 0, 'clim'),
+(2, 'clim2', '$P$BltOA1vaPoEW7JWcaSGczUBglGwkMQ/', 'clim2', 'k_subin@naver.com', '', '2021-09-28 09:35:48', '1632821748:$P$BMYRsp5rfZExPZzdNJkqgMmjRPDtHv/', 0, '수빈 김');
 
 --
 -- 덤프된 테이블의 인덱스

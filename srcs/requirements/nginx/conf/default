@@ -3,14 +3,14 @@ server {
 	listen [::]:443 ssl;
 	ssl on;
 
-	server_name skim.42.fr;
+	server_name clim.42.fr;
 
 	root /var/www/html;
 	index wp-login.php index.php index.html index.htm;
 
 	ssl_protocols TLSv1.2 TLSv1.3;
-	ssl_certificate /etc/ssl/certs/skim.crt;
-	ssl_certificate_key /etc/ssl/private/skim.key;
+	ssl_certificate /etc/ssl/certs/clim.crt;
+	ssl_certificate_key /etc/ssl/private/clim.key;
 
 	location / {
 		try_files $uri $uri/ =404;

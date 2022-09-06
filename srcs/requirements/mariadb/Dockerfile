@@ -1,6 +1,6 @@
 FROM	debian:buster
 
-LABEL	maintainer="skim@student.42seoul.kr"
+LABEL	maintainer="clim@student.42seoul.kr"
 
 RUN		apt-get update -y; \
 		apt-get upgrade -y; \
